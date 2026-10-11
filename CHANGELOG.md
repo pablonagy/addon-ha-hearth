@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.3] - 2026-10-11
+
+### Changed
+
+- Track [Hearth 0.7.3](https://github.com/pablonagy/ha-hearth/releases/tag/0.7.3): the edit buttons sit at the end of the page instead of over the cards when there is no rail
+
 ## [0.7.2] - 2026-10-11
 
 ### Fixed
@@ -117,6 +123,7 @@
 
 _Initial release, tracking [Hearth 0.1.0](https://github.com/knowald/ha-hearth/releases/tag/0.1.0)._
 
+[0.7.3]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.3
 [0.7.2]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.2
 [0.7.1]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.1
 [0.7.0]: https://github.com/knowald/addon-ha-hearth/releases/tag/0.7.0
