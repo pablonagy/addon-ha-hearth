@@ -11,7 +11,7 @@ arch:
 init: false
 
 # homepage of the add-on
-url: https://github.com/knowald/addon-ha-hearth
+url: https://github.com/pablonagy/addon-ha-hearth
 
 # icon for the menu panel integration
 panel_icon: mdi:fireplace
@@ -39,4 +39,4 @@ schema:
   hass_public_url: url?
 
 # published by .github/workflows/publish.yml
-image: ghcr.io/knowald/addon-ha-hearth-{arch}
+image: ghcr.io/pablonagy/addon-ha-hearth-{arch}

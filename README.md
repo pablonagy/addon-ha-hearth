@@ -1,12 +1,12 @@
 # addon-ha-hearth
 
-Home Assistant add-on for [Hearth](https://github.com/knowald/ha-hearth), a dashboard for wall tablets, phones and desktops.
+Home Assistant add-on for [Hearth](https://github.com/pablonagy/ha-hearth), a dashboard for wall tablets, phones and desktops.
 
 ## Install
 
-[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fknowald%2Faddon-ha-hearth)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fpablonagy%2Faddon-ha-hearth)
 
-To add the repository by hand, open Settings, Add-ons, Add-on Store, then Repositories from the overflow menu, and paste `https://github.com/knowald/addon-ha-hearth`. Install Hearth from the store once the repository is listed, then start it.
+To add the repository by hand, open Settings, Add-ons, Add-on Store, then Repositories from the overflow menu, and paste `https://github.com/pablonagy/addon-ha-hearth`. Install Hearth from the store once the repository is listed, then start it.
 
 Hearth appears in the sidebar and is served over Ingress. Setting a port in the add-on configuration exposes it directly as well, which is what wall tablets should use. Dashboard configuration is stored on the add-on's own volume and survives updates.
 
@@ -39,7 +39,7 @@ This option is available from version `0.1.1`.
 
 ## How it builds
 
-`version` in `config.yaml` names the `ha-hearth` tag the image is built from, so the add-on and the application move together. Publishing a matching GitHub release builds `ghcr.io/knowald/addon-ha-hearth-{arch}` for `aarch64` and `amd64` against pinned Home Assistant base images. All three add-ons share these images: stable versions are also tagged `latest`, betas `beta` and edge builds `edge`.
+`version` in `config.yaml` names the `ha-hearth` tag the image is built from, so the add-on and the application move together. Publishing a matching GitHub release builds `ghcr.io/pablonagy/addon-ha-hearth-{arch}` for `aarch64` and `amd64` against pinned Home Assistant base images. All three add-ons share these images: stable versions are also tagged `latest`, betas `beta` and edge builds `edge`.
 
 The edge add-on is built by the same workflow on a nightly schedule. It reads the newest `master` commit of `ha-hearth`, skips it unless its CI passed or it is already published, builds it as `<hearth version>-edge.<commit>`, and then commits that version to `edge/config.yaml` so the Supervisor offers the update only once both images exist. Run the workflow by hand with the `edge` channel to publish sooner.
 
@@ -65,3 +65,9 @@ be. Betas get no `CHANGELOG.md` entry. When the stable version ships, set
 reference link per version at the bottom. The Hearth version an add-on release
 tracks goes under `Changed`, or `Fixed` when that Hearth release only fixes bugs,
 linked to its Hearth release.
+
+## Credits
+
+This repository is a copy of [knowald/addon-ha-hearth](https://github.com/knowald/addon-ha-hearth), the Home Assistant add-on for [Hearth](https://github.com/knowald/ha-hearth) by Kevin Nowald. Hearth itself began as a rework of [ha-fusion](https://github.com/matt8707/ha-fusion) by Mattias Persson. Thank you both. Both projects are MIT licensed, and the license and copyright notices are kept in this repository.
+
+This copy is maintained independently by [@pablonagy](https://github.com/pablonagy) and builds from [pablonagy/ha-hearth](https://github.com/pablonagy/ha-hearth).

@@ -13,7 +13,7 @@ ARG BUILD_VERSION
 ARG HEARTH_REF=${BUILD_VERSION}
 
 RUN git init -q . && \
-  git fetch -q --depth 1 https://github.com/knowald/ha-hearth "${HEARTH_REF}" && \
+  git fetch -q --depth 1 https://github.com/pablonagy/ha-hearth "${HEARTH_REF}" && \
   git checkout -q FETCH_HEAD && \
   npm install -g pnpm && \
   pnpm install --frozen-lockfile && \

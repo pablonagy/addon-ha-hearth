@@ -50,15 +50,15 @@ jobs:
 
           # edge follows Hearth master, but only commits whose CI passed
           if [[ "$EDGE" == "true" ]]; then
-            commit=$(gh api repos/knowald/ha-hearth/commits/master --jq .sha)
+            commit=$(gh api repos/pablonagy/ha-hearth/commits/master --jq .sha)
             short=${commit:0:7}
-            conclusion=$(gh api -X GET "repos/knowald/ha-hearth/commits/$commit/check-runs" \
+            conclusion=$(gh api -X GET "repos/pablonagy/ha-hearth/commits/$commit/check-runs" \
               -f check_name="Check, lint and build" --jq '.check_runs[0].conclusion // "missing"')
             if [[ "$conclusion" != "success" ]]; then
               echo "::notice::Hearth CI for $short is $conclusion, not publishing edge."
               exit 0
             fi
-            hearth=$(gh api "repos/knowald/ha-hearth/contents/package.json?ref=$commit" \
+            hearth=$(gh api "repos/pablonagy/ha-hearth/contents/package.json?ref=$commit" \
               -H "Accept: application/vnd.github.raw" | jq -r .version)
             version="${hearth%%-*}-edge.$short"
             if [[ "$version" == "$(read_version edge/config.yaml)" ]]; then
@@ -127,7 +127,7 @@ jobs:
         uses: home-assistant/builder/actions/build-image@4de35182ce1e329181bffcbcc84d33db5e2c7e10 # 2026.06.0
         with:
           arch: ${{ matrix.arch }}
-          image: ghcr.io/knowald/addon-ha-hearth-${{ matrix.arch }}
+          image: ghcr.io/pablonagy/addon-ha-hearth-${{ matrix.arch }}
           version: ${{ needs.prepare.outputs.version }}
           build-args: |
             BUILD_FROM=${{ matrix.base }}
