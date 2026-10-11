@@ -1,6 +1,6 @@
 # required configuration options
 name: Hearth (beta)
-version: 0.7.4
+version: 0.7.5
 slug: ha_hearth_beta
 description: Prereleases of Hearth for testing the next version before it becomes stable
 arch:
