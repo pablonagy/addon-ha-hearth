@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.2] - 2026-10-11
+
+### Fixed
+
+- Track [Hearth 0.7.2](https://github.com/pablonagy/ha-hearth/releases/tag/0.7.2): the page fills the screen again when the page buttons are hidden
+
 ## [0.7.1] - 2026-10-11
 
 ### Changed
@@ -111,6 +117,7 @@
 
 _Initial release, tracking [Hearth 0.1.0](https://github.com/knowald/ha-hearth/releases/tag/0.1.0)._
 
+[0.7.2]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.2
 [0.7.1]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.1
 [0.7.0]: https://github.com/knowald/addon-ha-hearth/releases/tag/0.7.0
 [0.6.0]: https://github.com/knowald/addon-ha-hearth/releases/tag/0.6.0
