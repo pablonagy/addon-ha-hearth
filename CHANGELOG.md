@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.4] - 2026-10-11
+
+### Added
+
+- Track [Hearth 0.7.4](https://github.com/pablonagy/ha-hearth/releases/tag/0.7.4): track buttons and volume on the media card
+
 ## [0.7.3] - 2026-10-11
 
 ### Changed
@@ -123,6 +129,7 @@
 
 _Initial release, tracking [Hearth 0.1.0](https://github.com/knowald/ha-hearth/releases/tag/0.1.0)._
 
+[0.7.4]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.4
 [0.7.3]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.3
 [0.7.2]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.2
 [0.7.1]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.1
