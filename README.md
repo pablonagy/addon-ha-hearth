@@ -10,6 +10,22 @@ To add the repository by hand, open Settings, Add-ons, Add-on Store, then Reposi
 
 Hearth appears in the sidebar and is served over Ingress. Setting a port in the add-on configuration exposes it directly as well, which is what wall tablets should use. Dashboard configuration is stored on the add-on's own volume and survives updates.
 
+## Use Hearth as a dashboard
+
+The add-on puts Hearth in the sidebar, but Home Assistant only lets a dashboard be the default one. `dist/hearth-dashboard.js` turns Hearth into a regular dashboard:
+
+1. In HACS, add `https://github.com/pablonagy/addon-ha-hearth` as a custom repository of type **Dashboard** and download **Hearth Dashboard**. HACS registers the resource.
+2. In Settings → Dashboards, add a dashboard from scratch, open its raw configuration and replace it with:
+
+   ```yaml
+   strategy:
+     type: custom:hearth
+   ```
+
+3. Set it as the default dashboard. You can then hide the add-on's own sidebar entry.
+
+The strategy accepts `addon` (the add-on slug, `632b734c_ha_hearth` by default, which is this repository's stable Hearth) and `path`. The same view is available as a card, `type: custom:hearth-card`, for a panel view. Like Home Assistant's own add-on panel, it opens and keeps alive an Ingress session for the signed-in user, and Hearth signs in through the surrounding Home Assistant window.
+
 ## Channels
 
 The repository offers three add-ons. Each has its own data, so they can run side by side.
