@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.9] - 2026-10-11
+
+### Changed
+
+- Track [Hearth 0.7.9](https://github.com/pablonagy/ha-hearth/releases/tag/0.7.9): a centred 1200px page on large screens, no needless scrolling, tighter top spacing on phones
+
 ## [0.7.8] - 2026-10-11
 
 ### Changed
@@ -153,6 +159,7 @@
 
 _Initial release, tracking [Hearth 0.1.0](https://github.com/knowald/ha-hearth/releases/tag/0.1.0)._
 
+[0.7.9]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.9
 [0.7.8]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.8
 [0.7.7]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.7
 [0.7.6]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.6
