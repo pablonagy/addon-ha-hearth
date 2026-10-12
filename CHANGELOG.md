@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.8] - 2026-10-11
+
+### Changed
+
+- Track [Hearth 0.7.8](https://github.com/pablonagy/ha-hearth/releases/tag/0.7.8): a colour wheel and true colour presets for lights
+
 ## [0.7.7] - 2026-10-11
 
 ### Fixed
@@ -147,6 +153,7 @@
 
 _Initial release, tracking [Hearth 0.1.0](https://github.com/knowald/ha-hearth/releases/tag/0.1.0)._
 
+[0.7.8]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.8
 [0.7.7]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.7
 [0.7.6]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.6
 [0.7.5]: https://github.com/pablonagy/addon-ha-hearth/releases/tag/0.7.5
